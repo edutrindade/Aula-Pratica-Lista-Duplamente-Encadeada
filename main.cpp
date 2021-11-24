@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include "ListaDuplamenteEncadeada.cpp"
+#include "Funcoes.cpp"
  
 using namespace std;
  
@@ -11,25 +12,30 @@ int main() {
     SetConsoleOutputCP(CPAGE_UTF8);
  
     TipoLista lista;
-    Apontador x;
-    TipoItem item;
-
+   
     CriaListaVazia(&lista);
     
     int opcao_menu;
     do {
         Menu();
-        cout << "  \n        Escolha uma opção: ";
-        cin >> opcao_menu;
+        while ((cout << "  \n        Escolha uma opção: ") && !(cin >> opcao_menu)) {
+            cout << "  \n        Digite um valor válido."; 
+            cin.clear(); 
+            cin.ignore();
+            Sleep(1000);
+            system ("cls");
+            Menu();
+        }
         system ("cls");
         switch (opcao_menu) {
-              case 1:   break;   
-              case 2:   break; 
-              case 3:   break;
-              case 4:   break;
-              case 5:   break;
+              case 1: CadastraTrabalho(&lista); break;   
+              case 2: RemoveTrabalho(&lista); break; 
+              case 3: break;
+              case 4: break;
+              case 5: ListaTodosTrabalhos(&lista); break;
+              case 6: cout << "Aguardamos você em breve novamente\n\n"; break;
          }
-    } while (opcao_menu!=5); 
+    } while (opcao_menu!=6); 
 
     return 0;
 }

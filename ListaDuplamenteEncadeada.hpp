@@ -23,7 +23,7 @@ typedef struct TipoLista{
 
 void CriaListaVazia(TipoLista *lista);
 
-bool VerificaListaVazia(TipoLista * lista);
+bool VerificaListaVazia(TipoLista *lista);
 
 void InsereListaPrimeiro(TipoLista *lista, TipoItem *item);
 
@@ -38,7 +38,5 @@ void RemoveListaUltimo(TipoLista *lista, TipoItem *item);
 void RemoveElementoXbyId(TipoLista *lista, TipoItem *item, int idEle);
 
 void ImprimeLista(TipoLista *lista);
-
-void Menu();
 
 #endif

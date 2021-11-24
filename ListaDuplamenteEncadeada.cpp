@@ -118,28 +118,10 @@ void ImprimeLista(TipoLista *lista){
     x = lista->primeiro->prox;
     
     while (x != NULL){
-        cout << x->item.id << " ";
-        cout << x->item.descricao << " ";
+        cout << endl << endl << "Código: " << x->item.id << endl;
+        cout << "Título: " << x->item.titulo << endl;
+        cout << "Descrição: " << x->item.descricao << endl;
+        cout << "Data de Entrega: " << x->item.dataEntrega << endl;
         x = x->prox;
     }
-}
-
-void Menu() {    
-     cout<<"  \n        ����������������������������������������������������������������";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        �                     TRABALHOS ACADÊMICOS                     �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        ����������������������������������������������������������������";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        � 1 - INCLUIR NOVO TRABALHO                                    �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        � 2 - REMOVER UM TRABALHO                                      �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        � 3 - NAVEGAR PELOS TRABALHOS                                  �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        � 4 - PESQUISAR UM TRABALHO                                    �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        � 5 - SAIR                                                     �";
-     cout<<"  \n        �                                                              �";
-     cout<<"  \n        ����������������������������������������������������������������\n\n";
 }
