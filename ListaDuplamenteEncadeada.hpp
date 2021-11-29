@@ -37,6 +37,10 @@ void RemoveListaUltimo(TipoLista *lista, TipoItem *item);
 
 void RemoveElementoXbyId(TipoLista *lista, TipoItem *item, int idEle);
 
+bool PesquisaElementoXbyId(TipoLista *lista, TipoItem *item, int idEle);
+
+bool PesquisaElementoXbyTitulo(TipoLista *lista, TipoItem *item, char titulo[]);
+
 void ImprimeLista(TipoLista *lista);
 
 #endif

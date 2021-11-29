@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include "ListaDuplamenteEncadeada.hpp"
 
 using namespace std;
@@ -112,16 +113,54 @@ void RemoveElementoXbyId(TipoLista *lista, TipoItem *item, int idEle){
     free(aux);
 }
 
+bool PesquisaElementoXbyId(TipoLista *lista, TipoItem *item, int idEle) {
+    Apontador x;
+    
+    if (VerificaListaVazia(lista)){
+        return false;
+    }
+    
+    x = lista->primeiro;
+    
+    while (x != NULL) {
+        if (x->prox->item.id == idEle){
+            *item = x->prox->item;
+            return true;
+        }
+        x = x->prox;
+    }
+    return false;
+}
+
+bool PesquisaElementoXbyTitulo(TipoLista *lista, TipoItem *item, char titulo[]) {
+    Apontador x;
+    
+    if (VerificaListaVazia(lista)){
+        return false;
+    }
+    
+    x = lista->primeiro;
+    
+    while (x != NULL) {
+        if (strcmpi(x->prox->item.titulo, titulo) == 0){
+            *item = x->prox->item;
+            return true;
+        }
+        x = x->prox;
+    }
+    return false;
+}
+
 void ImprimeLista(TipoLista *lista){
     Apontador x;
     
     x = lista->primeiro->prox;
     
     while (x != NULL){
-        cout << endl << endl << "Código: " << x->item.id << endl;
+        cout << "Código: " << x->item.id << endl;
         cout << "Título: " << x->item.titulo << endl;
         cout << "Descrição: " << x->item.descricao << endl;
-        cout << "Data de Entrega: " << x->item.dataEntrega << endl;
+        cout << "Data de Entrega: " << x->item.dataEntrega << endl << endl;
         x = x->prox;
     }
 }

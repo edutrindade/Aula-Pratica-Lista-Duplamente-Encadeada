@@ -30,8 +30,8 @@ int main() {
         switch (opcao_menu) {
               case 1: CadastraTrabalho(&lista); break;   
               case 2: RemoveTrabalho(&lista); break; 
-              case 3: break;
-              case 4: break;
+              case 3: ListaTrabalhos(&lista); break;
+              case 4: PesquisaTrabalho(&lista); break;
               case 5: ListaTodosTrabalhos(&lista); break;
               case 6: cout << "Aguardamos você em breve novamente\n\n"; break;
          }
