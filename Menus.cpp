@@ -88,7 +88,7 @@ void CabecalhoRemocaoPorCodigo() {
      cout<<"  \n        �                                                              �";
      cout<<"  \n        �                    EXCLUSÃO DE TRABALHO                      �";
      cout<<"  \n        �                                                              �";
-     cout<<"  \n        ����������������������������������������������������������������";
+     cout<<"  \n        ����������������������������������������������������������������\n";
 }
 
 void CabecalhoPesquisaPorCodigo() {

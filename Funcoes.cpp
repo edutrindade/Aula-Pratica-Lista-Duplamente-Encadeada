@@ -257,7 +257,6 @@ void ImprimeTrabalhoAnterior(TipoLista *lista, TipoElemento *ptr) {
     for (p=ptr; p!=NULL; p=p->ant) {
         system("cls");
         CabecalhoListagemCompleta();
-        cout << endl << endl;
         cout << "Código: " << p->item.id << endl;
         cout << "Título: " << p->item.titulo << endl;
         cout << "Descrição: " << p->item.descricao << endl;
